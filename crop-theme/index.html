@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cropper.js</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/cropper.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 my-4">
+                <h1 class="text-center">Criar avatar com tema</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Passo 1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Selecione a foto</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Passo 2</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Recorte a foto</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Passo 3</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Faça o download</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <p>Selecione a foto</p>
+                <label id="selecionaAvatar" class="label" data-toggle="tooltip" title="Change your avatar">
+                    <img class="rounded img-fluid" id="avatar" src="assets/images/bg-crop.png" alt="avatar">
+                    <input type="file" class="sr-only" id="input" name="image" accept="image/*">
+                </label>
+                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabel">Cortar a imagem</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="img-container">
+                                    <img id="image" src="https://avatars0.githubusercontent.com/u/3456749">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary" id="crop">Cortar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 p-0">
+                <div id="foto-tema" class="m-0">
+                    <div class="col-md-12">
+                       <p>Resultado</p>
+                    </div>
+                    <div class="m-0" id="html-content-holder">
+                        <img id="output" class="img-fluid" src="" alt="">
+                        <img id="tema" class="tema img-fluid" src="assets/images/img2.jpg" alt="">
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <a class="btn btn-lg btn-download" id="btn-Convert-Html2Image" href="#">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/cropper.min.js"></script>
+    <script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
