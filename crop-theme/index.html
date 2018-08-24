@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,7 +9,35 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/cropper.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .overlay {
+            position: absolute;
+            bottom: -40px;
+            /* left: 0; */
+            /* right: 0; */
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-image: url(assets/images/img2.png);
+            background-size: contain;
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -74,19 +103,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-9 p-0">
+            <div class="col-md-5">
+                <div class="col-md-12 p-0">
                 <div id="foto-tema" class="m-0">
                     <div class="col-md-12">
-                       <p>Resultado</p>
+                        <p>Resultado</p>
                     </div>
-                    <div class="m-0" id="html-content-holder">
+                    <div class="m-0 p-0" id="html-content-holder">
                         <img id="output" class="img-fluid" src="" alt="">
-                        <img id="tema" class="tema img-fluid" src="assets/images/img2.jpg" alt="">
+                        <div class="overlay">
+                        </div>
                     </div>
                     <div class="col-md-12 text-center">
                         <a class="btn btn-lg btn-download" id="btn-Convert-Html2Image" href="#">Download</a>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>
@@ -97,4 +129,5 @@
     <script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
